@@ -2,7 +2,8 @@
 
 a collection of useful emacs functions
 
-## toggle-maximize-buffer
+## toggle maximize buffer
+```elisp
 (defun toggle-maximize-buffer ()
   "Toggle maximize buffer"
   (interactive)
@@ -13,8 +14,10 @@ a collection of useful emacs functions
     (setq my-saved-window-configuration (current-window-configuration)
           my-saved-point (point))
     (delete-other-windows)))
+```
 
 ## resize window
+```elisp
 (defun transient-window-resize ()
   "Transient version of window resize"
   (interactive)
@@ -28,6 +31,7 @@ a collection of useful emacs functions
 	   (define-key map [?{] #'shrink-window-horizontally)
 	   map)
        t)))
+```
 
 ## switch to last buffer
 ```elisp
